@@ -1,0 +1,17 @@
+body{
+  margin: 0px;
+}
+.board{
+  background: #99ccff;
+  height: 600px;
+  width: 100%;
+  position: absolute;
+}
+.car{
+  background: #ff5050;
+  height: 50px;
+  width: 70px;
+  position: absolute;
+  top: 200px;
+  left: 40px;
+}
