@@ -15,3 +15,24 @@ body{
   top: 200px;
   left: 40px;
 }
+.bar{
+width: 100px;
+height: 200px;
+background: blue;
+position: absolute;
+top: 0px;
+left: 200px;
+
+}
+.one{
+  left: 450px;
+}
+.two{
+  left: 650px;
+}
+.tre{
+  left: 900px;
+}
+.d{
+  top: 400px;
+}
