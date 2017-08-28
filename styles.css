@@ -3,7 +3,7 @@ body{
 }
 .board{
   background: #99ccff;
-  height: 600px;
+  height: 1000px;
   width: 100%;
   position: absolute;
 }
@@ -12,12 +12,12 @@ body{
   height: 50px;
   width: 70px;
   position: absolute;
-  top: 200px;
+  top: 400px;
   left: 40px;
 }
 .bar{
-width: 100px;
-height: 200px;
+width: 220px;
+height: 400px;
 background: blue;
 position: absolute;
 top: 0px;
@@ -25,14 +25,14 @@ left: 200px;
 
 }
 .one{
-  left: 450px;
+  left: 550px;
 }
 .two{
-  left: 650px;
+  left: 850px;
 }
 .tre{
-  left: 900px;
+  left: 1200px;
 }
 .d{
-  top: 400px;
+  top: 600px;
 }

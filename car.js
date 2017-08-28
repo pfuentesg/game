@@ -1,4 +1,4 @@
-function car ( x, y) {
-this.x=x;
-this.y=y;
+function Car ( x, y) {
+  this.positionX=x;
+  this.positionY=y;
 }
