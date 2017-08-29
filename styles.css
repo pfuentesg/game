@@ -1,13 +1,15 @@
-body{
+body {
   margin: 0px;
 }
-.board{
+
+.board {
   background: #99ccff;
   height: 1000px;
   width: 100%;
   position: absolute;
 }
-.car{
+
+.car {
   background: #ff5050;
   height: 50px;
   width: 70px;
@@ -15,24 +17,28 @@ body{
   top: 400px;
   left: 40px;
 }
-.bar{
-width: 220px;
-height: 400px;
-background: blue;
-position: absolute;
-top: 0px;
-left: 200px;
 
+.bar {
+  width: 220px;
+  height: 400px;
+  background: blue;
+  position: absolute;
+  top: 0px;
+  left: 200px;
 }
-.one{
+
+.one {
   left: 550px;
 }
-.two{
+
+.two {
   left: 850px;
 }
-.tre{
+
+.tre {
   left: 1200px;
 }
-.d{
+
+.d {
   top: 600px;
 }

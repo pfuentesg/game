@@ -1,31 +1,27 @@
-var board = new Board();
 $(document).ready(function() {
-  setInterval(check, 300);
+var game= new Game();
 
-  function check() {
-    var x = parseInt($(".car").css("left"));
-    x += 10;
-    $(".car").css("left", x + "px");
-    ($(document).keydown(function(e) {
-      console.log(e.keyCode);
-      if (e.keyCode === 40 && board.car.positionY < 950) {
-        goDown();
-        console.log("pasa");
-      } else if (e.keyCode === 38 && board.car.positionY > 0) {
-        goUp();
-        console.log("pasa2");
-      }
-      update();
-      checkBreak();
-    }));
+  function updateAllCars() {
+
 
   }
 
-  function checkBreak() {
-  
-    if (board.car.positionX < board.div.x) {
-      console.log("Game over");
+  ($(document).keydown(function(e) {
+    if (e.keyCode === 40) {
+      game.goDown();
+      console.log("pasa");
+    } else if (e.keyCode === 38) {
+      game.goUp();
+      console.log("pasa2");
     }
+    game.update();
+  }));
 
-  }
+  // function checkBreak() {
+  //
+  //   if (car.positionX >= (board.div.x >= board.div.x + board.div.wt)) {
+  //     console.log("Game over");
+  //   }
+  //
+  // }
 });
