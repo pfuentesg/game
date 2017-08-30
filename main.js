@@ -1,20 +1,18 @@
 $(document).ready(function() {
-var game= new Game();
+  var car= new Car();
+  var wall=new Wall();
+  GameStart(car,wall);
 
-  function updateAllCars() {
-
-
-  }
-
+  function updateAllCars() {}
   ($(document).keydown(function(e) {
     if (e.keyCode === 40) {
-      game.goDown();
+      car.goDown();
       console.log("pasa");
     } else if (e.keyCode === 38) {
-      game.goUp();
+      car.goUp();
       console.log("pasa2");
     }
-    game.update();
+  //  car.updatePosition();
   }));
 
   // function checkBreak() {
