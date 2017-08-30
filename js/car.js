@@ -6,12 +6,12 @@ function Car(x, y, speed) {
   $("#circuito").append(this.element);
 }
 Car.prototype.goUp = function() {
-  this.positionY -= 2;
+  this.y -= this.speed;
   console.log(this);
 };
 
 Car.prototype.goDown = function() {
-  this.positionY += this.speed;
+  this.y += this.speed;
 
   console.log(this);
 };

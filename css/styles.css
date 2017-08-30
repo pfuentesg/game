@@ -2,7 +2,7 @@ body {
   margin: 0px;
 }
 
-.board {
+#circuito {
   background: #99ccff;
   height: 1000px;
   width: 100%;
@@ -18,13 +18,9 @@ body {
   left: 40px;
 }
 
-.bar {
-  width: 220px;
-  height: 400px;
-  background: blue;
+.wall {
   position: absolute;
-  top: 0px;
-  left: 200px;
+
 }
 
 .one {
