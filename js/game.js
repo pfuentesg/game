@@ -1,29 +1,26 @@
 function Game() {
   var fps = 30;
   var carSpeedInPxSec = 100 / fps;
-  var wallSpeed = 5;
-
+  this.wallSpeed = 5;
   this.car = new Car(40, 500, carSpeedInPxSec);
-  this.wall = [new Wall(500, 200, 300, wallSpeed)];
-
+  this.wall = [];
   setInterval(this.update.bind(this), 1000 / fps);
 }
 
 Game.prototype.update = function() {
-
   this.car.update();
-  checkCollision();
-
+  //checkCollision();
+  this.pushWall();
   this.wall.forEach(function(e) {
-    push(new Wall(500, 200, 300, wallSpeed));
-    pushWall();
+    console.log("entro");
     e.update();
-    //if(e.x<=0){
-    //removeWall();
-    //}
-  });
+    this.pushWall();
+    if (e.x <= 0) {
+      //  removeWall();
+    }
+  }, this);
 };
-checkCollision = function() {
+Game.prototype.checkCollision = function() {
   var check = $(".car").collision(".wall");
   if (check.length != 0) {
     console.log('value is Array!');
@@ -31,12 +28,15 @@ checkCollision = function() {
     console.log('Not an array');
   }
 };
-removeWall = function() {
+Game.prototype.removeWall = function() {
   this.wall.splice(0, 1);
 };
-pushWall = function() {
-  this.wall.push(new Wall(500, 200, 300, wallSpeed));
+Game.prototype.pushWall = function() {
+  this.wall.push(new Wall(500, 200, 300, this.wallSpeed));
 };
+// pullWall=function(){
+//   this.wall.pull(new Wall(500, 200, 300, wallSpeed));
+// };
 //     new Wall(500, 200, 300, wallSpeed),
 // new Wall(800, 200, 500, wallSpeed, 1),
 // new Wall(1100, 200, 400, wallSpeed),
