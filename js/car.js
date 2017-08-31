@@ -7,16 +7,12 @@ function Car(x, y, speed) {
 }
 Car.prototype.goUp = function() {
   this.y -= this.speed;
-  console.log(this);
 };
 
 Car.prototype.goDown = function() {
   this.y += this.speed;
-
-  console.log(this);
 };
 Car.prototype.update = function() {
-  this.x += this.speed;
   this.element.css("top", this.y);
   this.element.css("left", this.x);
 };

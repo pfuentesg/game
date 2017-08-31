@@ -17,24 +17,3 @@ body {
   top: 400px;
   left: 40px;
 }
-
-.wall {
-  position: absolute;
-
-}
-
-.one {
-  left: 550px;
-}
-
-.two {
-  left: 850px;
-}
-
-.tre {
-  left: 1200px;
-}
-
-.d {
-  top: 600px;
-}
