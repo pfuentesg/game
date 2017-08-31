@@ -1,5 +1,6 @@
 $(document).ready(function() {
   var game = new Game();
+  game.newGame();
   ($(document).keydown(function(e) {
     if (e.keyCode === 40 && game.car.y < 950) {
       game.car.goDown();

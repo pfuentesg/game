@@ -12,16 +12,15 @@ function Wall(x, wt, hg, speed, id) {
     'background': '#000000',
     'position': "absolute"
   });
-  $("#circuito").append(this.elements);
+  $("#circuito").append(this.element);
   this.speed = speed;
 }
+
 Wall.prototype.update = function() {
-  if(this.x>0)
-  {this.x -= this.speed;
-  this.element.css("left", this.x);}
-  else
-  {this.element.remove();}
+  this.x -= this.speed;
+  this.element.css("left", this.x);
 };
+
 Wall.prototype.update = function() {
   this.x -= this.speed;
   this.element.css("left", this.x);
