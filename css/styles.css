@@ -1,7 +1,10 @@
 body {
   margin: 0px;
 }
-
+h1{
+  font-size:120px;
+  text-align: center;
+}
 #circuito {
   background: #99ccff;
   height: 1000px;
