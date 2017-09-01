@@ -1,0 +1,23 @@
+[33mcommit 1684eab1fdfe2af2e58c78f4a9021dff2cab6ff5[m
+Author: pablo fuentes <pablofuentesg1@yahoo.es>
+Date:   Fri Sep 1 09:38:38 2017 +0200
+
+    genera automaticamente
+
+[1mdiff --git a/js/wall.js b/js/wall.js[m
+[1mindex 93b4969..fe5fbee 100644[m
+[1m--- a/js/wall.js[m
+[1m+++ b/js/wall.js[m
+[36m@@ -27,9 +27,8 @@[m [mWall.prototype.update = function() {[m
+ };[m
+ Wall.prototype.newWall = function() {[m
+   var newId = Math.round(Math.random());[m
+[31m-  console.log(newId);[m
+[31m-  var newX = 2000;[m
+[31m-  var newWith = 200;[m
+[31m-  var newHeight = 200;[m
+[32m+[m[32m  var newX = 2200+Math.random()*(300-200)+180;[m
+[32m+[m[32m  var newWith = Math.random()*(300-200)+180;[m
+[32m+[m[32m  var newHeight = Math.random()*(300-200)+380;[m
+   return (new Wall(newX, newWith, newHeight, this.speed,newId));[m
+ };[m

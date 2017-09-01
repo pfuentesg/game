@@ -4,13 +4,14 @@ function Game() {
   this.wallSpeed = 5;
   this.car = new Car(40, 500, carSpeedInPxSec);
   this.walls = [];
-  setInterval(this.updateGame.bind(this), 1000 / fps);
+  this.interval=setInterval(this.updateGame.bind(this), 1000 / fps);
+
 }
 
 Game.prototype.updateGame = function() {
   this.car.update();
   this.checkCollision();
-  this.walls.forEach(function(wall) {
+  this.walls.forEach(function(wall, i) {
     wall.update();
     if (wall.x <= 0 - wall.width) {
       this.walls.shift();
@@ -22,7 +23,12 @@ Game.prototype.updateGame = function() {
 Game.prototype.checkCollision = function() {
   var check = $(".car").collision(".wall");
   if (check.length != 0) {
-    console.log('value is Array!');
+    alert("you are lost");
+    clearInterval(this.interval);
+    this.walls=0;
+    $(".wall").remove();
+    this.newGame();
+
   } else {
     console.log('Not an array');
   }
@@ -37,4 +43,5 @@ Game.prototype.newGame = function() {
   this.walls.push(new Wall(2000, 200, 300, this.wallSpeed, 1));
   this.walls.push(new Wall(2300, 200, 300, this.wallSpeed));
   this.walls.push(new Wall(2600, 200, 300, this.wallSpeed, 1));
+
 };

@@ -21,14 +21,10 @@ Wall.prototype.update = function() {
   this.element.css("left", this.x);
 };
 
-Wall.prototype.update = function() {
-  this.x -= this.speed;
-  this.element.css("left", this.x);
-};
 Wall.prototype.newWall = function() {
   var newId = Math.round(Math.random());
-  var newX = 2200+Math.random()*(300-200)+180;
-  var newWith = Math.random()*(300-200)+180;
-  var newHeight = Math.random()*(300-200)+380;
-  return (new Wall(newX, newWith, newHeight, this.speed,newId));
+  var newX = 2300;
+  var newWith = Math.random() * (300 - 200) + 180;
+  var newHeight = Math.random() * (300 - 200) + 380;
+  return (new Wall(newX, newWith, newHeight, this.speed, newId));
 };
