@@ -12,8 +12,10 @@ Game.prototype.updateGame = function() {
   this.checkCollision();
   this.walls.forEach(function(wall) {
     wall.update();
-    if (wall.x <= 0) {
-      //  removeWall();
+    if (wall.x <= 0-wall.width) {
+      this.walls.shift();
+      wall.element.remove();
+    this.walls.push(new Wall((wall.x+1750), 200, 300, this.wallSpeed,1));
     }
 
   }, this);
