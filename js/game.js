@@ -1,10 +1,12 @@
 function Game() {
-  var fps = 30;
-  var carSpeedInPxSec = 100 / fps;
+  this.fps = 30;
+  var carSpeedInPxSec = 100 / this.fps;
   this.wallSpeed = 5;
   this.car = new Car(40, 500, carSpeedInPxSec);
   this.walls = [];
-  this.interval=setInterval(this.updateGame.bind(this), 1000 / fps);
+  this.interval = function() {
+    setInterval(this.updateGame.bind(this), 1000 /this.fps );
+  };
 
 }
 
@@ -23,12 +25,11 @@ Game.prototype.updateGame = function() {
 Game.prototype.checkCollision = function() {
   var check = $(".car").collision(".wall");
   if (check.length != 0) {
-    alert("you are lost");
+    alert("you are lost(pres spacebar for new game)");
     clearInterval(this.interval);
-    this.walls=[];
+    this.walls.shift();
     $(".wall").remove();
-    this.newGame();
-
+    window.location.reload();
   } else {
     console.log('Not an array');
   }
