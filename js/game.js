@@ -25,7 +25,7 @@ Game.prototype.checkCollision = function() {
   if (check.length != 0) {
     alert("you are lost");
     clearInterval(this.interval);
-    this.walls=0;
+    this.walls=[];
     $(".wall").remove();
     this.newGame();
 
