@@ -27,9 +27,8 @@ Wall.prototype.update = function() {
 };
 Wall.prototype.newWall = function() {
   var newId = Math.round(Math.random());
-  console.log(newId);
-  var newX = 2000;
-  var newWith = 200;
-  var newHeight = 200;
+  var newX = 2200+Math.random()*(300-200)+180;
+  var newWith = Math.random()*(300-200)+180;
+  var newHeight = Math.random()*(300-200)+380;
   return (new Wall(newX, newWith, newHeight, this.speed,newId));
 };
