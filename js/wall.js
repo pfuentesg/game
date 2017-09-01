@@ -25,6 +25,11 @@ Wall.prototype.update = function() {
   this.x -= this.speed;
   this.element.css("left", this.x);
 };
-Wall.prototype.getRandomValues=function(){
-return math.round(math.random());
+Wall.prototype.newWall = function() {
+  var newId = Math.round(Math.random());
+  console.log(newId);
+  var newX = 2000;
+  var newWith = 200;
+  var newHeight = 200;
+  return (new Wall(newX, newWith, newHeight, this.speed,newId));
 };
